@@ -26,24 +26,6 @@ public class JwtAuthenticatorFilter extends OncePerRequestFilter {
 
         if(token != null) {
 
-//                token = token.split(" ")[1];
-//                System.out.println(">>>> Token: ");
-//                System.out.println(token);
-
-//                if( token.indexOf("MyRole_") == 0 ){
-//                    String role = token.substring( token.indexOf("_") + 1 ).toUpperCase();
-//
-//                    List<String> roles = new ArrayList<>();
-//                    roles.add(role);
-//                    System.out.println(">>> ROLES");
-//                    System.out.println(roles);
-//
-//                    UsernamePasswordAuthenticationToken auth = new UsernamePasswordAuthenticationToken(
-//                        null, null, roles.stream().map(SimpleGrantedAuthority::new).collect(Collectors.toList()));
-//
-//                    SecurityContextHolder.getContext().setAuthentication(auth);
-//                }
-
             try {
                 JWT jwt = new JWT(token.split(" ")[1]);
                 List<String> roles = jwt.verifyToken();
