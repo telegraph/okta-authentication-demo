@@ -1,0 +1,13 @@
+<div>
+
+<div style="margin-bottom: 32px">
+  <button mat-raised-button color="primary" (click)="getHello()" style="margin-right: 16px"> Call public Hello </button>
+  <button mat-raised-button color="accent" (click)="getHelloAdmin()" style="margin-right: 16px"> Call Admin Hello </button>
+  <button mat-raised-button color="warn" (click)="getHelloDeveloper()" style="margin-right: 16px"> Call Developer Hello</button>
+</div>
+
+<mat-card *ngIf="reply!=''">
+  <h2 [className]="checkErr ? 'error' : 'no-error'">{{reply}}</h2>
+</mat-card>
+
+</div>

@@ -1,0 +1,19 @@
+@import '../../../styles.scss';
+
+
+h2{
+    text-align: center;
+    padding: 10px;
+}
+
+.error{
+    background: #FFCDD2;
+    color: mat-color($warn);
+    border: mat-color($warn) 1px solid;
+}
+
+.no-error{
+    background: #C8E6C9;
+    color: #43A047;
+    border: #43A047 1px solid;
+}

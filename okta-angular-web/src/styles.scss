@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+//@import '~ag-grid/src/styles/ag-theme-balham/sass/ag-theme-balham';
+
+@import "./style/layout.scss"; //TODO delete once all the components are replaced with material design
+@import "./style/colors.scss"; //(?) TODO delete once all the components are replaced with material design
+
+@include mat-core();
+
+$background-color: white;
+$primary: mat-palette($telegraph-teal, 5);
+$accent: mat-palette($telegraph-teal, 1);
+$warn: mat-palette($red, 1);
+
+$redirect-theme: mat-light-theme(
+    $primary,
+    $accent,
+    $warn
+);
+
+@include angular-material-theme($redirect-theme);
+
+body, html {
+    height: 100%;
+    margin: 0 auto;
+    background-color: $background-color;
+}
+
+body {
+    font-family: 'Montserrat';
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    text-transform: uppercase;
+}
+

@@ -1,0 +1,71 @@
+@import "../../../styles.scss";
+
+$menu-lateral-padding: 36px;
+$line-selection-height: 4px;
+$menu-min-height: (64px - $line-selection-height);
+$margin-top-icon: $menu-min-height - $menu-min-height/2 - 20px; //-> 20 is the icon height/2
+
+mat-toolbar{
+    height: auto;
+    padding-left: $menu-lateral-padding;
+    padding-right: $menu-lateral-padding;
+    min-height: $menu-min-height;
+}
+
+svg-logo{
+    width: 36px;
+    margin-right: 8px;
+    margin-top: 8px;
+    fill: mat-color($primary, default-contrast);
+}
+
+button{
+    border-radius: 0;
+}
+
+.logo {
+    min-width: 160px;
+    min-height: $menu-min-height;
+    height: auto;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+}
+
+.btn-logo{
+    padding-left: 0;
+    text-transform: none;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.navbar-header{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav {
+    button {   
+        height: $menu-min-height;
+        padding-top: $line-selection-height;
+        border-radius: 0;
+        font-size: 12px;
+        border-bottom: mat-color($primary) $line-selection-height solid;
+    }
+
+    .btn-active{
+        border-bottom: mat-color($accent) $line-selection-height solid;
+    }
+}
+
+.nav-separator{
+    flex: 1 1 auto;
+}
+
+.btn_icon_account{
+    @media screen and (max-width: 630px) {
+        position: absolute;
+        right: $menu-lateral-padding;
+        top: $margin-top-icon;
+      }
+}

@@ -1,0 +1,28 @@
+<header>
+  <mat-toolbar color="primary" class="navbar-header">
+
+  <button mat-button class="btn-logo" style="padding-left: 0" routerLink="/">
+    <div class="logo">
+      <svg-logo></svg-logo>
+      <span>Okta Demo</span>
+    </div>
+  </button> 
+    
+    <nav>
+        <button mat-button *ngIf="oktaService.isAuthenticated" routerLink="/api" routerLinkActive="btn-active">API</button>
+      <button mat-button *ngIf="oktaService.isAuthenticated" routerLink="/groups" routerLinkActive="btn-active">Groups</button>
+      <button mat-button *ngIf="oktaService.isAuthenticated" routerLink="/profile" routerLinkActive="btn-active">Profile</button>
+    </nav>
+
+    <div class="nav-separator"></div>
+
+      <button mat-button *ngIf="!oktaService.isAuthenticated" (click)="callLogin()" routerLink="/login" outerLinkActive="btn-active">Login</button>
+      <button mat-icon-button class="btn_icon_account" [matMenuTriggerFor]="appMenu">
+        <mat-icon *ngIf="oktaService.isAuthenticated">account_circle</mat-icon>
+      </button>
+      <mat-menu #appMenu="matMenu">
+          <button mat-menu-item (click)="callLogout()">Signout</button>
+      </mat-menu>
+    
+  </mat-toolbar>
+</header>

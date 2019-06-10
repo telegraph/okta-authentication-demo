@@ -1,0 +1,22 @@
+<div *ngIf="!oktaService.groups">
+  Loading...
+</div>
+
+<div *ngIf="oktaService.user">
+  <h1>Hello {{oktaService.user.profile.firstName}}</h1>
+  <span>id: </span>
+  {{oktaService.user.id}}
+  <span>status: </span>
+  {{oktaService.user.status}}
+  <span>created: </span>
+  {{oktaService.user.created}}
+</div>
+
+<div *ngIf="oktaService.groups && oktaService.groups.length > 0">
+  Your Groups:
+  <ul>
+    <li *ngFor="let userGroup of oktaService.groups">
+      {{userGroup.profile.name}}
+    </li>
+  </ul>
+</div>

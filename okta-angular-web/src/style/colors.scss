@@ -1,0 +1,100 @@
+@import '~@angular/material/theming';
+
+//TODO: ask for the Telegraph colors guideline
+
+//===== TODO DELETE THIS 
+// (once all the components are replaced with Materal Design)
+$primary-color: #009688; 
+$secondary-color: #1A237E;
+
+$background-color: #EEE;
+$text-color: #333;
+
+$color-coefficient: 5%;
+
+$primary-color-light-1: lighten( $primary-color, $color-coefficient );
+$primary-color-light-2: lighten( $primary-color, $color-coefficient * 2 );
+$primary-color-light-3: lighten( $primary-color, $color-coefficient * 3 );
+$primary-color-light-4: lighten( $primary-color, $color-coefficient * 4 );
+$primary-color-light-5: lighten( $primary-color, $color-coefficient * 5 );
+
+$primary-color-dark-1: darken( $primary-color, $color-coefficient );
+$primary-color-dark-2: darken( $primary-color, $color-coefficient * 2 );
+$primary-color-dark-3: darken( $primary-color, $color-coefficient * 3 );
+$primary-color-dark-4: darken( $primary-color, $color-coefficient * 4 );
+$primary-color-dark-5: darken( $primary-color, $color-coefficient * 5 );
+//
+
+$telegraph-teal: (
+    1: #02c3aa,
+    2: #03aa9a,
+    3: #03908b,
+    4: #04777b,
+    5: #045e6c,
+    6: #05455c,
+    7: #052b4d,
+    8: #06123d,
+    contrast: (
+        1: $black-87-opacity,
+        2: $black-87-opacity,
+        3: $black-87-opacity,
+        4: $black-87-opacity,
+        5: white,
+        6: white,
+        7: white,
+        8: white,
+    )
+);
+
+$green-teal: (
+    1: #02c3aa,
+    2: #02ab92,
+    3: #019379,
+    4: #017b61,
+    5: #016449,
+    6: #014c31,
+    7: #003418,
+    8: #001c00,
+    contrast: (
+        1: $black-87-opacity,
+        2: $black-87-opacity,
+        3: $black-87-opacity,
+        4: $black-87-opacity,
+        5: white,
+        6: white,
+        7: white,
+        8: white,
+    )
+);
+
+//TODO: Purple
+//TODO: Pink
+//TODO: Green
+//TODO: Orange
+
+$red:(
+    1: #ff0000,
+    2: #de0000,
+    3: #be0000,
+    4: #9d0000,
+    5: #7d0000,
+    6: #5c0000,
+    7: #3c0000,
+    8: #1b0000,
+    contrast: (
+        1: $black-87-opacity,
+        2: $black-87-opacity,
+        3: $black-87-opacity,
+        4: $black-87-opacity,
+        5: white,
+        6: white,
+        7: white,
+        8: white,
+    )
+
+)
+
+//TODO: Dark Blue
+//TODO: Blue
+//TODO: Premium Gold
+//TODO: Greyscale

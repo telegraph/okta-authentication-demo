@@ -1,0 +1,9 @@
+@import "../styles.scss";
+
+main {
+    width: calc(#{$page_max_width} - #{$page_padding}*2);
+    max-width: calc(100% - #{$page_padding}*2);
+    margin: 0 auto;
+    padding: $page_padding;
+    background-color: #FFF;
+}

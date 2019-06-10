@@ -1,0 +1,83 @@
+swagger: "2.0"
+info:
+  description: "Redirect"
+  version: "1.0.0"
+  title: "Swagger Redirect"
+  termsOfService: "http://swagger.io/terms/"
+  contact:
+    email: "apiteam@swagger.io"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "dev-554909.oktapreview.com"
+basePath: "/oauth2/default"
+tags:
+  - name: "token"
+    description: "token"
+    externalDocs:
+      description: "Reference at:"
+      url: "https://developer.okta.com/authentication-guide/implementing-authentication/client-creds"
+
+schemes:
+  - "https"
+
+paths:
+  /token:
+    post:
+      tags:
+        - "token"
+      summary: ""
+      description: ""
+      operationId: ""
+      consumes:
+        - "application/json"
+      produces:
+        - "application/x-www-form-urlencoded"
+
+
+      parameters:
+
+        - name: "authorization"
+          in: "header"
+          type: "string"
+          default: "Basic MG9hYHGBHRSBG"
+          required: true
+
+        - name: "cache-control"
+          in: "header"
+          type: "string"
+          default: "no-cache"
+          required: true
+
+        - in: "body"
+          name: "data"
+          required: true
+          schema:
+            type: "string"
+            default: "grant_type=client_credentials&redirect_uri=http%3A%2F%2Flocalhost%3A8080&scope=customScope"
+
+      responses:
+        200:
+          description: "Ok"
+          schema:
+            $ref: '#/definitions/Token'
+
+definitions:
+  Token:
+    type: "object"
+    properties:
+      access_token:
+        type: "string"
+      token_type:
+        type: "string"
+      expires_in:
+        type: "integer"
+        format: "int64"
+      scope:
+        type: "string"
+
+    example:
+      access_token: "eyJhbGfbhkebfkw1LQ"
+      token_type: "Bearer"
+      expires_in: 3600
+      scope: "customScope"
