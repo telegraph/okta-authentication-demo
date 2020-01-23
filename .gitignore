@@ -15,12 +15,18 @@ speed-measure-plugin.json
 
 # IDEs and editors
 */.idea
+.idea
+mvnw
+.mvn
+mvnw.cmd
 .project
 .classpath
+.factorypath
 .c9/
-*.launch
 .settings/
 *.sublime-workspace
+*.iml
+*.launch
 
 # IDE - VSCode
 .vscode/*
