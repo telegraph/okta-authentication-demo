@@ -1,4 +1,4 @@
-package com.telegraph.redirect.config;
+package uk.co.telegraph.okta.config;
 
 import java.io.IOException;
 import javax.servlet.Filter;

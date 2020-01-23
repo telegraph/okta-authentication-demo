@@ -1,4 +1,4 @@
-package com.telegraph.redirect.security;
+package uk.co.telegraph.okta.security;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
