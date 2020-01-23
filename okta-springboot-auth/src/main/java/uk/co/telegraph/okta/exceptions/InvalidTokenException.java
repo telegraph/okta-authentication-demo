@@ -1,4 +1,4 @@
-package com.telegraph.redirect.exceptions;
+package uk.co.telegraph.okta.exceptions;
 
 import com.okta.jwt.JwtVerificationException;
 import org.springframework.http.HttpStatus;

@@ -1,10 +1,10 @@
-package com.telegraph.redirect.security;
+package uk.co.telegraph.okta.security;
 
 import com.okta.jwt.AccessTokenVerifier;
 import com.okta.jwt.Jwt;
 import com.okta.jwt.JwtVerificationException;
 import com.okta.jwt.JwtVerifiers;
-import com.telegraph.redirect.exceptions.InvalidTokenException;
+import uk.co.telegraph.okta.exceptions.InvalidTokenException;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;

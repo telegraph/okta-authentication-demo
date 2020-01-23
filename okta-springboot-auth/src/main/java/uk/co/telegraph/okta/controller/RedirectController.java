@@ -1,4 +1,4 @@
-package com.telegraph.redirect.controller;
+package uk.co.telegraph.okta.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
