@@ -1,12 +1,5 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
-# compiled output
-*/dist
-*/tmp
-*/out-tsc
-*/target
-*//target
-
 # dependencies
 */node_modules
 */bower_components
@@ -26,6 +19,7 @@ mvnw.cmd
 .factorypath
 .c9/
 .settings/
+.editorrconfig
 *.sublime-workspace
 *.iml
 *.launch
@@ -61,6 +55,9 @@ Thumbs.db
 # compiled output
 */dist
 */tmp
+*/out-tsc
+*/target
+/target
 */app/**/*.js
 */app/**/*.js.map
 
